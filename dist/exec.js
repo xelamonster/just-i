@@ -1,1 +1,0 @@
-var{spawnSync:o}=require("child_process"),{join:s}=require("path"),e=process.argv.slice(2),r=process.cwd(),n=process.platform==="win32",t=n?"just.exe":"just",c=s(__dirname,"bin"),i=s(c,t);process.env.PATH=[c,process.env.PATH].join(n?";":":");o(i,e,{cwd:r,stdio:"inherit"});
