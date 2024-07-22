@@ -1,0 +1,1 @@
+var s=require("child_process"),o=require("path"),r=process.argv.slice(2),c=process.platform==="win32",t=c?"just.exe":"just",e=(0,o.join)(__dirname,"bin",t),n=(0,s.spawn)(e,r,{cwd:process.cwd(),stdio:"inherit",detached:!c});n.unref();process.exit(0);

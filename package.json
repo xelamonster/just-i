@@ -1,0 +1,40 @@
+{
+  "name": "just-i",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "just",
+    "justfile",
+    "install"
+  ],
+  "license": "Unlicense",
+  "author": "Alex Mullen <alex@xela.foo>",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node __bin__/build.js",
+    "latest": "node __bin__/latest-ver.js",
+    "lint": "biome lint .",
+    "fix": "biome lint --write .",
+    "fmt": "dprint fmt",
+    "clean": "rm -rf dist",
+    "install": "echo",
+    "postinstall": "node dist/install.js"
+  },
+  "dependencies": {
+    "node-uname": "^3.1.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@octokit/rest": "^21.0.1",
+    "decompress": "^4.2.1",
+    "dprint": "^0.47.2",
+    "esbuild": "^0.23.0"
+  },
+  "engine": {
+    "node": ">= 12"
+  },
+  "packageManager": "pnpm@9.5.0"
+}
