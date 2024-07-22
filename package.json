@@ -23,7 +23,7 @@
     "fix": "biome lint --write .",
     "fmt": "dprint fmt",
     "clean": "rm -rf dist",
-    "prepack": "pnpm run build",
+    "install": "pnpm run build",
     "postinstall": "node dist/install.js"
   },
   "dependencies": {
