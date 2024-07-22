@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "Unlicense",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "pnpm i file:../.."
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@9.5.0"
+}

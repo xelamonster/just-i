@@ -1,1 +1,1 @@
-var{spawn:c}=require("child_process"),{join:e}=require("path"),n=process.argv.slice(2),s=process.platform==="win32",o=s?"just.exe":"just",r=e(__dirname,"bin",o),t=c(r,n,{cwd:process.cwd(),stdio:"inherit",detached:!s});t.unref();process.exit(0);
+var{spawnSync:o}=require("child_process"),{join:s}=require("path"),e=process.argv.slice(2),r=process.cwd(),n=process.platform==="win32",t=n?"just.exe":"just",c=s(__dirname,"bin"),i=s(c,t);process.env.PATH=[c,process.env.PATH].join(n?";":":");o(i,e,{cwd:r,stdio:"inherit"});

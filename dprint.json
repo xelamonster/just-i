@@ -9,7 +9,7 @@
   "json": { "preferSingleLine": true },
   "markdown": {},
   "yaml": {},
-  "excludes": ["**/node_modules", "**/*-lock.json", "package.json"],
+  "excludes": ["**/node_modules", "**/*-lock.json", "**/*-lock.yaml", "package.json"],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.91.4.wasm",
     "https://plugins.dprint.dev/json-0.19.3.wasm",

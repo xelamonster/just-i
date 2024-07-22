@@ -1,0 +1,8 @@
+default:
+    @just --list
+
+test:
+    echo hello
+
+test2:
+    just --help

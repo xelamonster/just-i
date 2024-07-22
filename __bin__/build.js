@@ -1,6 +1,6 @@
 import { build } from "esbuild"
 
-await build({
+export const config = {
   entryPoints: ["lib/exec.js", "lib/install.js"],
   bundle: true,
   outdir: "dist",
@@ -10,4 +10,6 @@ await build({
   minify: true,
   logLevel: "info",
   external: ["node-uname"],
-})
+}
+
+await build(config)

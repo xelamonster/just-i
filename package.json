@@ -18,12 +18,12 @@
   ],
   "scripts": {
     "build": "node __bin__/build.js",
-    "latest": "node __bin__/latest-ver.js",
+    "latest": "node __bin__/latest.js",
     "lint": "biome lint .",
     "fix": "biome lint --write .",
     "fmt": "dprint fmt",
     "clean": "rm -rf dist",
-    "install": "echo noop",
+    "prepare": "node __bin__/prepare.js",
     "postinstall": "node dist/install.js"
   },
   "dependencies": {
