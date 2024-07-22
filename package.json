@@ -10,6 +10,9 @@
   "license": "Unlicense",
   "author": "Alex Mullen <alex@xela.foo>",
   "type": "commonjs",
+  "bin": {
+    "just": "dist/exec.js"
+  },
   "files": [
     "dist"
   ],
@@ -20,7 +23,7 @@
     "fix": "biome lint --write .",
     "fmt": "dprint fmt",
     "clean": "rm -rf dist",
-    "install": "echo",
+    "install": "echo noop",
     "postinstall": "node dist/install.js"
   },
   "dependencies": {
