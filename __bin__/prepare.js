@@ -9,18 +9,11 @@ if (process.cwd() !== process.env.INIT_CWD) {
   process.exit()
 }
 
-import { build } from "esbuild"
 import { mkdir, writeFile } from "node:fs/promises"
 import { join } from "node:path"
-import { config } from "./build.js"
 
-console.log(">>> Preparing just-i <<<")
-console.log("Bundling...")
-await build({ ...config, logLevel: "warning" })
-console.log("Writing binary stubs...")
 const bin = join(process.cwd(), "dist", "bin")
 const just = join(bin, process.platform === "win32" ? "just.exe" : "just")
 await mkdir(bin).catch(_ => null)
 await writeFile(just, "#!/usr/bin/env node")
 console.log("Wrote stub: %s", just)
-console.log(">>> Prepped and ready! <<<")
