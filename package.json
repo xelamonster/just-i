@@ -13,9 +13,6 @@
   "bin": {
     "just": "dist/exec.js"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "node __bin__/build.js",
     "latest": "node __bin__/latest.js",
