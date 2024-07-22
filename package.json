@@ -14,6 +14,9 @@
     "just": "dist/exec.js"
   },
   "scripts": {
+    "test": "rm -rf lib/bin && env JUST_I_DEBUG=true node lib/exec.js -f __test__/justfile",
+    "pretest:dist": "pnpm run build",
+    "test:dist": "rm -rf dist/bin && node dist/exec.js -f __test__/justfile",
     "build": "node __bin__/build.js",
     "latest": "node __bin__/latest.js",
     "lint": "biome lint .",
@@ -21,7 +24,8 @@
     "fmt": "dprint fmt",
     "clean": "rm -rf dist",
     "install": "pnpm run build",
-    "postinstall": "node dist/install.js"
+    "postinstall": "node __bin__/postinstall.js",
+    "prepublishOnly": "pnpm test:dist"
   },
   "dependencies": {
     "node-uname": "^3.1.1"

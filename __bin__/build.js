@@ -6,7 +6,6 @@ export const config = {
   outdir: "dist",
   platform: "node",
   format: "cjs",
-  target: "node12",
   minify: true,
   logLevel: "info",
   external: ["node-uname"],
